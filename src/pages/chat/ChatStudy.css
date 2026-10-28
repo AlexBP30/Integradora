@@ -1,0 +1,333 @@
+.study-chat { padding: 8px 0 28px; color: #173c43; }
+.study-chat-header { display:flex; align-items:center; justify-content:space-between; gap:16px; margin-bottom:20px; }
+.study-chat-header h1 { margin:0 0 5px; font-size:1.8rem; }
+.study-chat-header p { margin:0; color:#64748b; }
+.study-chat-header button, .study-chat-form button { border:0; background:#078b87; color:white; padding:11px 17px; border-radius:10px; cursor:pointer; }
+.study-chat-layout { display:grid; grid-template-columns:minmax(190px,280px) minmax(0,1fr); min-height:510px; border:1px solid #dce7e8; border-radius:16px; overflow:hidden; background:white; }
+.study-chat-contacts { border-right:1px solid #dce7e8; padding:14px; overflow:auto; }
+.study-chat-contacts h2 { font-size:1rem; margin:4px 0 14px; }
+.study-chat-contact { width:100%; border:1px solid transparent; border-radius:10px; padding:12px; background:transparent; text-align:left; cursor:pointer; margin-bottom:6px; }
+.study-chat-contact:hover, .study-chat-contact.selected { background:#e9f7f6; border-color:#a6d9d6; }
+.study-chat-contact strong, .study-chat-contact small, .study-chat-room-title small { display:block; }
+.study-chat-contact small, .study-chat-room-title small { color:#64748b; margin-top:4px; }
+.study-chat-room { display:flex; flex-direction:column; min-width:0; }
+.study-chat-room-title { padding:15px 18px; border-bottom:1px solid #dce7e8; }
+.study-chat-messages { flex:1; min-height:330px; max-height:60vh; overflow:auto; display:flex; flex-direction:column; gap:12px; padding:20px; background:#fafdfd; }
+.study-chat-bubble { align-self:flex-start; max-width:78%; padding:11px 14px; background:#e9eff1; border-radius:14px; overflow-wrap:anywhere; }
+.study-chat-bubble.mine { align-self:flex-end; background:#d5f3ee; }
+.study-chat-bubble p { margin:0 0 6px; white-space:pre-wrap; }
+.study-chat-bubble small { color:#526977; font-size:.72rem; }
+.study-chat-form { display:flex; gap:9px; padding:13px; border-top:1px solid #dce7e8; }
+.study-chat-form input { flex:1; min-width:0; border:1px solid #dce7e8; border-radius:10px; padding:12px; font:inherit; }
+.study-chat-form button:disabled { opacity:.55; cursor:not-allowed; }
+.study-chat-placeholder { margin:auto; color:#64748b; text-align:center; padding:22px; }
+.study-chat-error { padding:12px; background:#fff1ef; color:#b42318; border-radius:10px; }
+@media(max-width:700px) { .study-chat-layout { grid-template-columns:1fr; } .study-chat-contacts { border-right:0; border-bottom:1px solid #dce7e8; max-height:200px; } .study-chat-messages { min-height:280px; } }
+
+
+
+[data-theme="dark"] .student-content .study-chat {
+  color: #edf5fa;
+}
+
+[data-theme="dark"] .student-content .study-chat-header h1 {
+  color: #f1f7fb;
+}
+
+[data-theme="dark"] .student-content .study-chat-header p {
+  color: #b9cbd7;
+}
+
+[data-theme="dark"] .student-content .study-chat-layout {
+  background: #1c2b39 !important;
+  border: 1px solid #344c5d !important;
+}
+
+
+[data-theme="dark"] .student-content .study-chat-contacts {
+  background: #1c2b39;
+  border-right-color: #344c5d;
+  border-bottom-color: #344c5d;
+}
+
+[data-theme="dark"] .student-content .study-chat-contacts h2 {
+  color: #f1f7fb;
+}
+
+
+[data-theme="dark"] .student-content .study-chat-contact {
+  background: transparent;
+  color: #edf5fa;
+  border: 1px solid transparent;
+}
+
+
+[data-theme="dark"] .student-content .study-chat-contact strong {
+  color: #f1f7fb !important;
+}
+
+[data-theme="dark"] .student-content .study-chat-contact small {
+  color: #b9cbd7 !important;
+}
+
+
+[data-theme="dark"] .student-content .study-chat-contact.selected {
+  background: #174e4a !important;
+  border-color: #32766e !important;
+}
+
+[data-theme="dark"] .student-content .study-chat-contact.selected strong {
+  color: #83e7dc !important;
+}
+
+
+[data-theme="dark"] .student-content .study-chat-contact:hover {
+  background: #253f45;
+  border-color: #40596b;
+}
+
+
+[data-theme="dark"] .student-content .study-chat-room {
+  background: #1c2b39;
+}
+
+[data-theme="dark"] .student-content .study-chat-room-title {
+  background: #223342;
+  border-bottom-color: #344c5d;
+  color: #f1f7fb;
+}
+
+[data-theme="dark"] .student-content .study-chat-room-title strong {
+  color: #f1f7fb;
+}
+
+[data-theme="dark"] .student-content .study-chat-room-title small {
+  color: #b9cbd7;
+}
+
+
+[data-theme="dark"] .student-content .study-chat-messages {
+  background: #15232f !important;
+}
+
+
+[data-theme="dark"] .student-content .study-chat-bubble {
+  background: #2a3d4d !important;
+  color: #edf5fa !important;
+  border: 1px solid #40596b;
+}
+
+[data-theme="dark"] .student-content .study-chat-bubble.mine {
+  background: #174e4a !important;
+  color: #e4faf6 !important;
+  border: 1px solid #32766e;
+}
+
+
+[data-theme="dark"] .student-content .study-chat-bubble p {
+  color: inherit !important;
+}
+
+[data-theme="dark"] .student-content .study-chat-bubble small {
+  color: #b9cbd7 !important;
+}
+
+[data-theme="dark"] .student-content .study-chat-bubble.mine small {
+  color: #a5e3d9 !important;
+}
+
+
+
+[data-theme="dark"] .student-content .study-chat-form {
+  background: #1c2b39;
+  border-top-color: #344c5d;
+}
+
+
+[data-theme="dark"] .student-content .study-chat-form input {
+  background: #253847 !important;
+  color: #f1f7fb !important;
+  border: 1px solid #40596b !important;
+}
+
+[data-theme="dark"] .student-content .study-chat-form input::placeholder {
+  color: #a8bdca;
+}
+
+[data-theme="dark"] .student-content .study-chat-form input:focus {
+  outline: 2px solid rgba(73, 198, 186, 0.25);
+  border-color: #49c6ba !important;
+}
+
+
+[data-theme="dark"] .student-content .study-chat-header button,
+[data-theme="dark"] .student-content .study-chat-form button {
+  background: #078b87;
+  color: #ffffff;
+}
+
+[data-theme="dark"] .student-content .study-chat-header button:hover,
+[data-theme="dark"] .student-content .study-chat-form button:hover {
+  background: #0a9e98;
+}
+
+
+[data-theme="dark"] .student-content .study-chat-placeholder {
+  color: #b9cbd7 !important;
+}
+
+[data-theme="dark"] .student-content .study-chat-error {
+  background: #492c35;
+  color: #ffadb7;
+  border: 1px solid #71414d;
+}
+
+[data-theme="dark"] .study-chat {
+  color: #edf5fa;
+}
+
+[data-theme="dark"] .study-chat-header h1 {
+  color: #f1f7fb !important;
+}
+
+[data-theme="dark"] .study-chat-header p {
+  color: #b9cbd7 !important;
+}
+
+
+[data-theme="dark"] .study-chat-layout {
+  background: #1c2b39 !important;
+  border: 1px solid #344c5d !important;
+}
+
+
+[data-theme="dark"] .study-chat-contacts {
+  background: #1c2b39 !important;
+  border-right-color: #344c5d !important;
+  border-bottom-color: #344c5d !important;
+}
+
+[data-theme="dark"] .study-chat-contacts h2 {
+  color: #f1f7fb !important;
+}
+
+
+[data-theme="dark"] .study-chat-contact {
+  background: transparent !important;
+  color: #edf5fa !important;
+  border: 1px solid transparent !important;
+}
+
+[data-theme="dark"] .study-chat-contact strong {
+  color: #f1f7fb !important;
+}
+
+[data-theme="dark"] .study-chat-contact small {
+  color: #b9cbd7 !important;
+}
+
+[data-theme="dark"] .study-chat-contact.selected {
+  background: #174e4a !important;
+  border-color: #32766e !important;
+}
+
+[data-theme="dark"] .study-chat-contact.selected strong {
+  color: #83e7dc !important;
+}
+
+
+
+[data-theme="dark"] .study-chat-contact:hover {
+  background: #253f45 !important;
+  border-color: #40596b !important;
+}
+
+
+[data-theme="dark"] .study-chat-room {
+  background: #1c2b39 !important;
+}
+
+
+[data-theme="dark"] .study-chat-room-title {
+  background: #223342 !important;
+  border-bottom-color: #344c5d !important;
+  color: #f1f7fb !important;
+}
+
+[data-theme="dark"] .study-chat-room-title strong {
+  color: #f1f7fb !important;
+}
+
+[data-theme="dark"] .study-chat-room-title small {
+  color: #b9cbd7 !important;
+}
+
+[data-theme="dark"] .study-chat-messages {
+  background: #15232f !important;
+}
+
+[data-theme="dark"] .study-chat-bubble {
+  background: #2a3d4d !important;
+  color: #edf5fa !important;
+  border: 1px solid #40596b !important;
+}
+
+[data-theme="dark"] .study-chat-bubble.mine {
+  background: #174e4a !important;
+  color: #e4faf6 !important;
+  border: 1px solid #32766e !important;
+}
+
+[data-theme="dark"] .study-chat-bubble p {
+  color: inherit !important;
+}
+
+[data-theme="dark"] .study-chat-bubble small {
+  color: #b9cbd7 !important;
+}
+
+[data-theme="dark"] .study-chat-bubble.mine small {
+  color: #a5e3d9 !important;
+}
+
+[data-theme="dark"] .study-chat-form {
+  background: #1c2b39 !important;
+  border-top-color: #344c5d !important;
+}
+
+[data-theme="dark"] .study-chat-form input {
+  background: #253847 !important;
+  color: #f1f7fb !important;
+  border: 1px solid #40596b !important;
+  color-scheme: dark;
+}
+
+[data-theme="dark"] .study-chat-form input::placeholder {
+  color: #a8bdca !important;
+}
+
+[data-theme="dark"] .study-chat-form input:focus {
+  border-color: #49c6ba !important;
+  outline: 2px solid rgba(73, 198, 186, 0.25);
+}
+
+[data-theme="dark"] .study-chat-header button,
+[data-theme="dark"] .study-chat-form button {
+  background: #078b87 !important;
+  color: #ffffff !important;
+}
+
+[data-theme="dark"] .study-chat-header button:hover:not(:disabled),
+[data-theme="dark"] .study-chat-form button:hover:not(:disabled) {
+  background: #0a9e98 !important;
+}
+
+[data-theme="dark"] .study-chat-placeholder {
+  color: #b9cbd7 !important;
+}
+
+[data-theme="dark"] .study-chat-error {
+  background: #492c35 !important;
+  color: #ffadb7 !important;
+  border: 1px solid #71414d !important;
+}

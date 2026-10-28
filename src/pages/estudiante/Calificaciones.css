@@ -1,0 +1,372 @@
+.materias-page:has(.grades-grid) {
+  padding: 12px 16px 24px;
+}
+.materias-page:has(.grades-grid) .materias-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+.materias-page:has(.grades-grid) .dashboard-small-title {
+  margin: 0 0 4px;
+  font-size: 11px;
+  letter-spacing: 1.2px;
+}
+.materias-page:has(.grades-grid) .materias-header h1 {
+  margin: 0 0 4px;
+  font-size: clamp(23px, 2.2vw, 29px);
+  line-height: 1.2;
+}
+.materias-page:has(.grades-grid) .materias-header > div:first-child > p:last-child {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.45;
+}
+.materias-page:has(.grades-grid) .general-average-card {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: auto;
+  min-width: 0;
+  max-width: 100%;
+  padding: 10px 14px;
+  border-radius: 12px;
+  box-shadow: 0 2px 9px rgba(16,56,70,.035);
+}
+.materias-page:has(.grades-grid) .general-average-icon {
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  min-width: 36px;
+  font-size: 18px;
+  border-radius: 9px;
+}
+.materias-page:has(.grades-grid) .general-average-info span {font-size: 13px; font-weight: 700;}
+.materias-page:has(.grades-grid) .general-average-info p {font-size: 11px; margin: 2px 0 0;}
+.materias-page:has(.grades-grid) .general-average-card > strong {font-size: 25px; line-height: 1; margin-left: 6px;}
+
+.materias-page .grades-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: start;
+  gap: 14px;
+}
+.materias-page .grade-card {
+  min-width: 0;
+  height: auto;
+  min-height: 0;
+  align-self: start;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(16,56,70,.035);
+}
+.materias-page .grade-card-color {height: 4px; min-height: 4px;}
+.materias-page .grade-card-content {padding: 15px 17px 13px;}
+.materias-page .grade-card-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 0 0 11px;
+  margin: 0;
+}
+.materias-page .grade-card-header > div:first-child {min-width: 0;}
+.materias-page .grade-card-header h2 {
+  font-size: 16px;
+  line-height: 1.3;
+  margin: 0 0 4px;
+  overflow-wrap: anywhere;
+}
+.materias-page .grade-card-header p {
+  font-size: 11px;
+  line-height: 1.45;
+  margin: 2px 0;
+}
+.materias-page .grade-average {
+  flex: 0 0 auto;
+  min-width: 66px;
+  padding: 7px 9px;
+  border-radius: 9px;
+  text-align: center;
+}
+.materias-page .grade-average span {display: block; font-size: 10px; line-height: 1.2;}
+.materias-page .grade-average strong {display: block; font-size: 19px; line-height: 1.25;}
+.materias-page .grade-periods {margin: 0; padding: 0;}
+.materias-page .grade-periods-list {margin: 0; padding: 0;}
+.materias-page .grade-period {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  min-height: 44px;
+  padding: 8px 0;
+  margin: 0;
+  font-size: 12px;
+}
+.materias-page .grade-period > span {min-width: 0; overflow-wrap: anywhere; line-height: 1.35;}
+.materias-page .grade-period-right {display: flex; align-items: center; gap: 6px; flex: 0 0 auto;}
+.materias-page .grade-period-right > strong {
+  min-width: 40px;
+  padding: 5px 7px;
+  font-size: 12px;
+  line-height: 1.2;
+  border-radius: 7px;
+  text-align: center;
+}
+.materias-page .grade-action-button {
+  display: inline-grid;
+  place-items: center;
+  width: 29px;
+  height: 29px;
+  min-width: 29px;
+  padding: 0;
+  border-radius: 7px;
+  font-size: 13px;
+}
+.materias-page .grade-periods-actions {
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px 0 0;
+  margin: 0;
+}
+.materias-page .grade-periods-actions .btn,
+.materias-page .grade-empty .btn {
+  width: auto;
+  min-height: 32px;
+  padding: 7px 11px;
+  border-radius: 8px;
+  font-size: 12px;
+  line-height: 1.3;
+}
+.materias-page .grade-empty {padding: 12px 0 3px; font-size: 12px;}
+.materias-page .grade-empty p {margin: 0 0 10px;}
+
+@media (max-width: 1050px) {
+  .materias-page .grades-grid {grid-template-columns: 1fr;}
+}
+@media (max-width: 640px) {
+  .materias-page:has(.grades-grid) {padding: 12px 4px 20px;}
+  .materias-page:has(.grades-grid) .general-average-card {width: 100%; justify-content: space-between;}
+  .materias-page .grade-card-content {padding: 13px;}
+  .materias-page .grade-card-header h2 {font-size: 15px;}
+}
+
+
+
+
+.grades-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 320px), 420px));
+  gap: 18px;
+  justify-content: start;
+  align-items: start;
+}
+
+.grade-card {
+  width: 100%;
+  min-width: 0;
+  height: auto;
+  align-self: start;
+}
+
+.grade-card-content {
+  min-width: 0;
+}
+
+.grade-card-header {
+  gap: 12px;
+}
+
+.grade-card-header > div:first-child {
+  min-width: 0;
+}
+
+.grade-card-header h2,
+.grade-period > span {
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 600px) {
+  .grades-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 14px;
+  }
+}
+
+
+
+
+[data-theme="dark"] .student-content .general-average-card {
+  background: #1c2b39 !important;
+  border: 1px solid #344c5d !important;
+  box-shadow: none;
+}
+
+[data-theme="dark"] .student-content .general-average-info span {
+  color: #f1f7fb !important;
+}
+
+[data-theme="dark"] .student-content .general-average-info p {
+  color: #b9cbd7 !important;
+}
+
+[data-theme="dark"] .student-content .general-average-card > strong {
+  color: #6bdfd3 !important;
+}
+
+[data-theme="dark"] .student-content .general-average-icon {
+  background: #253f45 !important;
+}
+
+
+[data-theme="dark"] .student-content .grade-card {
+  background: #1c2b39 !important;
+  border-color: #344c5d !important;
+  color: #edf5fa !important;
+  box-shadow: none;
+}
+
+
+[data-theme="dark"] .student-content .grade-card-color {
+  opacity: 1;
+}
+
+
+[data-theme="dark"] .student-content .grade-card-header h2 {
+  color: #f1f7fb !important;
+}
+
+
+[data-theme="dark"] .student-content .grade-card-header p {
+  color: #b9cbd7 !important;
+}
+
+
+[data-theme="dark"] .student-content .grade-average {
+  background: #253f45 !important;
+}
+
+[data-theme="dark"] .student-content .grade-average span {
+  color: #b9cbd7 !important;
+}
+
+[data-theme="dark"] .student-content .grade-average strong {
+  color: #6bdfd3 !important;
+}
+
+
+[data-theme="dark"] .student-content .grade-card-header,
+[data-theme="dark"] .student-content .grade-period,
+[data-theme="dark"] .student-content .grade-periods-actions {
+  border-color: #344c5d !important;
+}
+
+
+[data-theme="dark"] .student-content .grade-period > span {
+  color: #e2edf5 !important;
+}
+
+
+[data-theme="dark"] .student-content .grade-period-right > strong {
+  background: #253f45 !important;
+  color: #6bdfd3 !important;
+}
+
+
+[data-theme="dark"] .student-content .grade-action-button {
+  background: #304252 !important;
+  color: #edf5fa !important;
+  border: 1px solid #456072 !important;
+}
+
+[data-theme="dark"] .student-content .grade-action-button:hover {
+  background: #3b5365 !important;
+}
+
+
+[data-theme="dark"] .student-content .grade-periods-actions .btn {
+  background: #087f7b;
+  color: #ffffff;
+  border-color: #087f7b;
+}
+
+
+[data-theme="dark"] .student-content .grade-empty,
+[data-theme="dark"] .student-content .grade-empty p {
+  color: #b9cbd7 !important;
+}
+
+
+[data-theme="dark"] .student-content .grade-period > span {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+
+
+
+[data-theme="dark"] .grade-modal,
+[data-theme="dark"] .grade-modal-content,
+[data-theme="dark"] .modal-content {
+  background: #1c2b39 !important;
+  border-color: #344c5d !important;
+  color: #edf5fa !important;
+}
+
+
+[data-theme="dark"] .grade-modal h2,
+[data-theme="dark"] .grade-modal-content h2,
+[data-theme="dark"] .modal-content h2 {
+  color: #f1f7fb !important;
+}
+
+
+[data-theme="dark"] .grade-modal h3,
+[data-theme="dark"] .grade-modal-content h3,
+[data-theme="dark"] .modal-content h3 {
+  color: #6bdfd3 !important;
+}
+
+
+[data-theme="dark"] .grade-modal label,
+[data-theme="dark"] .grade-modal-content label,
+[data-theme="dark"] .modal-content label {
+  color: #d5e5ee !important;
+}
+
+
+[data-theme="dark"] .grade-modal input,
+[data-theme="dark"] .grade-modal-content input,
+[data-theme="dark"] .modal-content input {
+  background: #253847 !important;
+  color: #f1f7fb !important;
+  border: 1px solid #40596b !important;
+  color-scheme: dark;
+}
+
+
+[data-theme="dark"] .grade-modal .btn-secondary,
+[data-theme="dark"] .grade-modal-content .btn-secondary,
+[data-theme="dark"] .modal-content .btn-secondary {
+  background: #304252 !important;
+  color: #e2edf5 !important;
+  border: 1px solid #456072 !important;
+}
+
+
+[data-theme="dark"] .grade-modal .modal-close,
+[data-theme="dark"] .grade-modal-content .modal-close,
+[data-theme="dark"] .modal-content .modal-close {
+  background: #304252 !important;
+  color: #e2edf5 !important;
+}
+
+
+[data-theme="dark"] .grade-modal hr,
+[data-theme="dark"] .grade-modal-content hr,
+[data-theme="dark"] .modal-content hr {
+  border-color: #40596b !important;
+}

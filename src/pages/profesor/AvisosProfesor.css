@@ -1,0 +1,259 @@
+
+.avisos-profesor {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0;
+  color: #153943;
+}
+
+.avisos-profesor-encabezado {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+}
+
+.avisos-profesor-etiqueta {
+  margin: 0 0 8px;
+  color: #078b87;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+
+.avisos-profesor-encabezado h1 {
+  margin: 0 0 6px;
+  color: #153943;
+  font-size: clamp(26px, 3vw, 34px);
+  font-weight: 750;
+}
+
+.avisos-profesor-encabezado p:last-child {
+  margin: 0;
+  color: #64748b;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.avisos-profesor-panel {
+  display: grid;
+  gap: 10px;
+  width: 100%;
+  max-width: 760px;
+  margin: 0 0 28px;
+  padding: 22px 24px;
+  background: #fff;
+  border: 1px solid #dce7e8;
+  border-radius: 15px;
+  box-shadow: 0 5px 18px rgba(21, 57, 67, 0.035);
+}
+
+.avisos-profesor-panel h2 {
+  margin: 0 0 8px;
+  color: #153943;
+  font-size: 20px;
+  font-weight: 750;
+}
+
+.avisos-profesor-panel label {
+  display: block;
+  margin: 4px 0 0;
+  color: #24434a;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.avisos-profesor-panel input,
+.avisos-profesor-panel select,
+.avisos-profesor-panel textarea {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 10px 12px;
+  background: #fff;
+  border: 1px solid #d6e3e5;
+  border-radius: 9px;
+  color: #153943;
+  font: inherit;
+  font-size: 13px;
+  line-height: 1.5;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.avisos-profesor-panel input,
+.avisos-profesor-panel select {
+  min-height: 42px;
+}
+
+.avisos-profesor-panel textarea {
+  min-height: 100px;
+  max-height: 240px;
+  resize: vertical;
+}
+
+.avisos-profesor-panel input:focus,
+.avisos-profesor-panel select:focus,
+.avisos-profesor-panel textarea:focus {
+  outline: none;
+  border-color: #078b87;
+  box-shadow: 0 0 0 3px rgba(7, 139, 135, 0.1);
+}
+
+.avisos-profesor-acciones {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.avisos-profesor-principal,
+.avisos-profesor-secundario,
+.avisos-profesor-eliminar {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  padding: 10px 15px;
+  border-radius: 9px;
+  font: inherit;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.avisos-profesor-principal {
+  border: 1px solid #078b87;
+  background: #078b87;
+  color: #fff;
+}
+
+.avisos-profesor-principal:hover {
+  background: #066f6c;
+}
+
+.avisos-profesor-secundario {
+  border: 1px solid #b8dcd9;
+  background: #fff;
+  color: #087c79;
+}
+
+.avisos-profesor-secundario:hover {
+  background: #eff9f8;
+}
+
+.avisos-profesor-eliminar {
+  border: 1px solid #f0d0cc;
+  background: #fff;
+  color: #b42318;
+}
+
+.avisos-profesor-eliminar:hover {
+  background: #fff1ef;
+}
+
+.avisos-profesor button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.avisos-profesor-error,
+.avisos-profesor-exito {
+  max-width: 760px;
+  margin-bottom: 14px;
+  padding: 11px 14px;
+  border-radius: 9px;
+  font-size: 13px;
+}
+
+.avisos-profesor-error {
+  background: #fff0ee;
+  color: #b42318;
+}
+
+.avisos-profesor-exito {
+  background: #e6f7f1;
+  color: #176c4a;
+}
+
+.avisos-profesor-lista {
+  width: 100%;
+  max-width: 1000px;
+  margin-top: 24px;
+}
+
+.avisos-profesor-tarjetas {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(min(100%, 300px), 1fr)
+  );
+  gap: 14px;
+  align-items: start;
+}
+
+.avisos-profesor-tarjeta {
+  min-width: 0;
+  padding: 18px 20px;
+  background: #fff;
+  border: 1px solid #dce7e8;
+  border-radius: 14px;
+  box-shadow: 0 4px 14px rgba(21, 57, 67, 0.035);
+}
+
+.avisos-profesor-tarjeta h3 {
+  margin: 8px 0;
+  color: #153943;
+  font-size: 17px;
+  font-weight: 750;
+  overflow-wrap: anywhere;
+}
+
+.avisos-profesor-tarjeta p {
+  margin: 8px 0;
+  color: #64748b;
+  font-size: 13px;
+  line-height: 1.6;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+.avisos-profesor-meta {
+  color: #078b87;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.avisos-profesor-vacio {
+  max-width: 760px;
+  padding: 28px 20px;
+  background: #fff;
+  border: 1px dashed #dce7e8;
+  border-radius: 14px;
+  color: #64748b;
+  text-align: center;
+  font-size: 14px;
+}
+
+@media (max-width: 700px) {
+  .avisos-profesor-encabezado {
+    align-items: flex-start;
+  }
+
+  .avisos-profesor-panel {
+    max-width: 100%;
+    padding: 18px;
+  }
+
+  .avisos-profesor-tarjetas {
+    grid-template-columns: 1fr;
+  }
+
+  .avisos-profesor-acciones {
+    justify-content: flex-start;
+  }
+}

@@ -1,0 +1,132 @@
+.welcome.registro-screen {
+  min-height: 100vh;
+  padding: 30px 18px;
+  background: radial-gradient(circle at 15% 12%, rgba(83, 208, 202, .22), transparent 30%),
+              radial-gradient(circle at 90% 85%, rgba(14, 158, 159, .24), transparent 35%),
+              #076e6e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-x: hidden;
+}
+.registro-screen .welcome-card {
+  width: min(100%, 470px);
+  max-width: 470px;
+  padding: 27px 36px 28px;
+  background: #fff;
+  border: 1px solid rgba(13, 59, 65, .13);
+  border-radius: 30px;
+  box-shadow: 0 20px 55px rgba(0, 44, 48, .24);
+  text-align: center;
+}
+.registro-screen .logo { margin: 0 auto 5px; }
+.registro-screen .logo img { width: 68px; max-height: 76px; object-fit: contain; }
+.registro-screen .welcome-card h1 {
+  margin: 0;
+  color: #122333;
+  font-size: clamp(29px, 4vw, 35px);
+  line-height: 1.13;
+  font-weight: 800;
+  letter-spacing: -.8px;
+}
+.registro-screen .subtitle {
+  margin: 7px 0 18px;
+  font-size: 14px;
+  line-height: 1.45;
+  color: #64748b;
+}
+.registro-screen .form { gap: 12px; margin: 0; }
+.registro-screen .form-group { gap: 5px; }
+.registro-screen .form-group label {
+  color: #334155;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .1px;
+}
+.registro-screen .form-group input {
+  height: 43px;
+  width: 100%;
+  padding: 10px 15px;
+  border: 1.5px solid #c9dde1;
+  border-radius: 22px;
+  background: #fbfefe;
+  color: #122333;
+  font-size: 14px;
+  transition: border-color .2s ease, box-shadow .2s ease;
+}
+.registro-screen .form-group input::placeholder { color: #98a9b1; opacity: 1; }
+.registro-screen .form-group input:focus {
+  border-color: #078b87;
+  box-shadow: 0 0 0 3px rgba(7, 139, 135, .12);
+}
+.registro-screen .role-selector {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4px;
+  padding: 4px;
+  background: #e8f4f4;
+  border: 1px solid #d6eaea;
+  border-radius: 24px;
+}
+.registro-screen .role-button {
+  width: 100%;
+  min-height: 35px;
+  padding: 7px 8px;
+  border: 0;
+  border-radius: 19px;
+  background: transparent;
+  color: #4a6570;
+  font: inherit;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background .2s, color .2s, box-shadow .2s;
+}
+.registro-screen .role-button.active {
+  color: white;
+  background: #078b87;
+  box-shadow: 0 3px 9px rgba(7,139,135,.18);
+}
+.registro-screen .form > .btn-primary {
+  width: 100%;
+  min-height: 44px;
+  margin-top: 8px;
+  padding: 11px 18px;
+  border-radius: 24px;
+  background: #078b87;
+  color: white;
+  font-size: 15px;
+  font-weight: 700;
+  box-shadow: 0 5px 12px rgba(7,139,135,.16);
+  transition: background .2s, transform .2s;
+}
+.registro-screen .form > .btn-primary:hover:not(:disabled) {
+  background: #056e6b;
+  transform: translateY(-1px);
+}
+.registro-screen .form > .btn-primary:disabled { opacity: .65; cursor: wait; }
+.registro-screen .back-button {
+  display: block;
+  width: 58%;
+  min-height: 39px;
+  margin: 12px auto 0;
+  padding: 8px 15px;
+  border: 1.5px solid #1c6074;
+  border-radius: 22px;
+  background: #fff;
+  color: #1c6074;
+  font-size: 14px;
+  font-weight: 700;
+  transition: background .2s;
+}
+.registro-screen .back-button:hover { background: #eff9f9; }
+@media (max-width: 480px) {
+  .welcome.registro-screen { padding: 14px 12px; align-items: flex-start; }
+  .registro-screen .welcome-card { padding: 23px 21px; border-radius: 24px; }
+  .registro-screen .logo img { width: 59px; }
+  .registro-screen .form { gap: 10px; }
+  .registro-screen .subtitle { margin-bottom: 14px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .registro-screen * { transition: none !important; }
+}

@@ -1,0 +1,53 @@
+
+.ap-page { width: 100%; min-width: 0; color: #173c45; }
+.ap-toolbar { display: flex; align-items: end; justify-content: space-between; gap: 14px; flex-wrap: wrap; margin: 18px 0 20px; }
+.ap-selector { display: flex; flex-direction: column; gap: 6px; flex: 0 1 380px; min-width: 220px; max-width: 380px; }
+.ap-selector label, .ap-fields label { font-weight: 650; color: #24434a; font-size: 13px; }
+.ap-selector select, .ap-fields input, .ap-fields textarea { box-sizing: border-box; display: block; width: 100%; margin-top: 6px; padding: 10px 12px; border: 1px solid #d3e2e3; border-radius: 9px; background: #fff; color: #243b40; font: inherit; font-size: 14px; outline-color: #078b87; }
+.ap-primary, .ap-secondary { border: 0; border-radius: 9px; padding: 10px 15px; font: inherit; font-size: 13px; font-weight: 700; cursor: pointer; }
+.ap-primary { background: #078b87; color: #fff; }
+.ap-primary:hover { background: #056e6b; }
+.ap-primary:disabled { opacity: .6; cursor: wait; }
+.ap-secondary { background: #e9f2f2; color: #22565a; }
+
+.ap-form, .ap-card, .ap-empty { background: #fff; border: 1px solid #e1ebec; border-radius: 13px; box-shadow: 0 4px 14px rgba(13,67,69,.035); }
+.ap-form { width: 100%; max-width: 860px; padding: 20px 22px; margin: 18px 0 22px; }
+.ap-form-heading { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.ap-form-heading h2 { margin: 0; font-size: 19px; color: #174e50; }
+.ap-text-button { background: none; border: 0; color: #527477; font: inherit; font-size: 13px; cursor: pointer; }
+.ap-hint { color: #688184; font-size: 13px; margin: 6px 0 16px; }
+.ap-fields { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+.ap-full { grid-column: 1 / -1; }
+.ap-fields textarea { resize: vertical; min-height: 85px; }
+.ap-form-actions { display: flex; justify-content: flex-end; gap: 9px; margin-top: 18px; }
+
+.ap-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 310px), 390px)); justify-content: start; align-items: start; gap: 15px; }
+.ap-card { min-width: 0; padding: 17px 18px; border-top: 3px solid #078b87; }
+.ap-card-top { display: flex; justify-content: space-between; align-items: center; gap: 10px; }
+.ap-status { color: #087a76; background: #e4f6f3; padding: 5px 9px; border-radius: 20px; font-size: 11px; font-weight: 700; }
+.ap-expired { color: #a45b25; background: #fff1df; }
+.ap-card-actions { display: flex; gap: 5px; }
+.ap-card-actions button { border: 0; background: #f2f7f7; border-radius: 7px; padding: 6px 8px; cursor: pointer; }
+.ap-card h2 { color: #174e50; font-size: 17px; line-height: 1.3; margin: 12px 0 7px; overflow-wrap: anywhere; }
+.ap-description { color: #536d70; white-space: pre-wrap; overflow-wrap: anywhere; min-height: 0; font-size: 13px; line-height: 1.5; }
+.ap-details { display: flex; flex-direction: column; gap: 6px; border-top: 1px solid #e6eeee; padding-top: 11px; margin-top: 13px; color: #4a696c; font-size: 12px; }
+.ap-empty { padding: 30px 18px; text-align: center; color: #597578; font-size: 23px; }
+.ap-empty h2 { font-size: 18px; color: #255558; }
+.ap-empty p { font-size: 13px; }
+
+.ap-publish-mode { display: flex; flex-direction: column; gap: 9px; }
+.ap-mode-label { font-size: 13px; font-weight: 700; color: #24434a; }
+.ap-mode-options { display: flex; gap: 9px; flex-wrap: wrap; }
+.ap-mode-options label { display: flex; align-items: center; gap: 7px; padding: 9px 12px; border: 1px solid #cbdcdd; border-radius: 9px; background: #f7fbfb; cursor: pointer; font-size: 13px; }
+.ap-mode-options input { width: auto; margin: 0; accent-color: #078b87; }
+.ap-file-note { margin: 0; font-size: 13px; color: #37686a; }
+.ap-file-link { display: inline-block; border: 0; background: #e4f6f3; color: #076f6b; padding: 8px 11px; border-radius: 8px; font: inherit; font-size: 13px; font-weight: 700; cursor: pointer; margin-top: 5px; }
+.ap-kind { font-size: 12px; color: #078b87; font-weight: 700; }
+
+@media (max-width: 650px) {
+  .ap-selector { flex: 1 1 100%; max-width: 100%; }
+  .ap-grid { grid-template-columns: minmax(0, 1fr); }
+  .ap-fields { grid-template-columns: 1fr; }
+  .ap-form { padding: 16px; }
+  .ap-form-actions { flex-wrap: wrap; }
+}

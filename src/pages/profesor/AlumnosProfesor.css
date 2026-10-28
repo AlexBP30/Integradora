@@ -1,0 +1,147 @@
+
+.alumnos-profesor {
+  width: 100%;
+  max-width: 1180px;
+  margin: 0;
+  color: #243247;
+}
+
+.alumnos-profesor-encabezado { margin-bottom: 20px; }
+.alumnos-profesor-etiqueta {
+  margin: 0 0 7px;
+  color: #078b87;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+.alumnos-profesor-encabezado h1 {
+  margin: 0 0 6px;
+  font-size: clamp(25px, 2.7vw, 32px);
+  line-height: 1.2;
+}
+.alumnos-profesor-encabezado > p:last-child {
+  margin: 0;
+  color: #718198;
+  font-size: 14px;
+}
+
+.alumnos-profesor-panel {
+  width: fit-content;
+  max-width: 100%;
+  min-width: min(100%, 370px);
+  margin-bottom: 22px;
+  padding: 14px 16px;
+  background: #fff;
+  border: 1px solid #e0e8ed;
+  border-radius: 13px;
+  box-shadow: 0 3px 12px rgba(31,57,71,.035);
+}
+.alumnos-profesor-panel label {
+  display: block;
+  margin-bottom: 7px;
+  font-size: 13px;
+  font-weight: 700;
+}
+.alumnos-profesor-panel select {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  max-width: 420px;
+  padding: 10px 12px;
+  border: 1px solid #d5e0e6;
+  border-radius: 9px;
+  background: #fff;
+  color: #243247;
+  font: inherit;
+  font-size: 14px;
+}
+.alumnos-profesor-panel select:focus-visible {
+  outline: 2px solid #69bdbb;
+  outline-offset: 2px;
+}
+
+.alumnos-profesor-resumen {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 0 0 14px;
+}
+.alumnos-profesor-resumen h2 { margin: 0 0 3px; font-size: 20px; }
+.alumnos-profesor-resumen p { margin: 0; color: #078b87; font-size: 13px; font-weight: 700; }
+.alumnos-profesor-resumen > span { color: #718198; font-size: 13px; white-space: nowrap; }
+
+.alumnos-profesor-lista {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 285px), 320px));
+  justify-content: start;
+  align-items: start;
+  gap: 14px;
+}
+.alumnos-profesor-tarjeta {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 11px;
+  min-width: 0;
+  padding: 17px;
+  background: #fff;
+  border: 1px solid #e0e8ed;
+  border-radius: 13px;
+  box-shadow: 0 3px 12px rgba(31,57,71,.035);
+}
+.alumnos-profesor-avatar {
+  display: grid;
+  place-items: center;
+  flex: 0 0 42px;
+  width: 42px;
+  height: 42px;
+  background: #e6f6f4;
+  border-radius: 11px;
+  font-size: 21px;
+}
+.alumnos-profesor-datos { flex: 1 1 170px; min-width: 0; }
+.alumnos-profesor-datos h3 {
+  margin: 0 0 6px;
+  font-size: 16px;
+  overflow-wrap: anywhere;
+}
+.alumnos-profesor-datos p {
+  margin: 4px 0;
+  color: #718198;
+  font-size: 13px;
+  line-height: 1.4;
+  overflow-wrap: anywhere;
+}
+.alumnos-profesor-inscrito {
+  padding: 5px 9px;
+  background: #e6f6ed;
+  color: #167d4a;
+  border-radius: 99px;
+  font-size: 11px;
+  font-weight: 700;
+}
+.alumnos-profesor-vacio {
+  padding: 32px 18px;
+  text-align: center;
+  background: #fff;
+  border: 1px dashed #d6e3e9;
+  border-radius: 13px;
+  color: #718198;
+}
+.alumnos-profesor-vacio > span { font-size: 32px; }
+.alumnos-profesor-vacio h2 { margin: 10px 0 6px; color: #243247; font-size: 18px; }
+.alumnos-profesor-vacio p { margin: 0; font-size: 14px; }
+.alumnos-profesor-error {
+  padding: 12px 14px;
+  background: #fff1f1;
+  color: #a22c2c;
+  border: 1px solid #f5c6c6;
+  border-radius: 10px;
+}
+@media (max-width: 600px) {
+  .alumnos-profesor-panel { width: 100%; min-width: 0; }
+  .alumnos-profesor-lista { grid-template-columns: minmax(0, 1fr); }
+  .alumnos-profesor-tarjeta { padding: 15px; }
+}
